@@ -18,14 +18,14 @@
 
 .main-content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: left;
   height: 75%;
   margin-top: 200px;
   margin-left: 2rem;
   margin-right: 2rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .main-content form {
@@ -54,8 +54,19 @@
 .main-content button:hover {
   background-color: var(--green2);
 }
+.image-content,
+.form-content {
+  flex: 1;
+}
+.image-content img {
+  max-width: 100%; 
+}
+.form-content form {
+  width: 100%;
+  max-width: 400px;
+}
 
-    </style>
+</style>
 </head>
 <body>
 <div class="header">
@@ -89,6 +100,9 @@
 
         <button type="submit">Woning Toevoegen</button>
     </form>
+    <div class="image-content">
+      <img src="images/omgevingtje.png" alt="Mountain Villa">
+    </div>
 </div>
 </body>
 </html>
